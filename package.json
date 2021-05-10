@@ -1,0 +1,35 @@
+{
+  "name": "pom-chi",
+  "version": "1.0.0",
+  "description": "An HTML starter using PostCSS and TailwindCSS.",
+  "main": "main.js",
+  "scripts": {
+    "build": "TAILWIND_MODE=build NODE_ENV=production postcss assets/css/style.css -o style.css",
+    "watch": "postcss assets/css/style.css -o style.css --watch",
+    "serve": "cross-env NODE_ENV=development concurrently \"postcss assets/css/style.css -o style.css --watch\"  \"live-server . --no-css-inject\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leroyrosales/pom-chi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leroyrosales/pom-chi/issues"
+  },
+  "homepage": "https://github.com/leroyrosales/pom-chi#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.2",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.1",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.1",
+    "cross-env": "^7.0.2",
+    "live-server": "^1.2.1"
+  }
+}
